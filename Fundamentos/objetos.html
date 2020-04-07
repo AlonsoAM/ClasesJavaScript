@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos</title>
+</head>
+
+<body>
+    <h1>Objetos</h1>
+    <script>
+        // Objetos
+        let a = new String("Hola")
+        console.log(a)
+
+        const b = {}
+        console.log(b)
+
+        const c = new Object()
+        console.log(c)
+
+        /*
+            Dentro de un objeto a las variables se les va a llamar atributos / propiedades y a las funciones se les llama método
+        */
+
+        const alonso = {
+            nombre: 'Alonso',
+            apellido: 'Anchante',
+            edad: 25,
+            pasatiempos: ["Bailar", "Escuchar musica"],
+            soltero: false,
+            contacto: {
+                email: 'alonso.amoreno@live.com',
+                instagram: '@alonsoam',
+                telefono: 959148798
+            },
+            saludar: function() {
+                console.log("Hola")
+            },
+
+            decirMiNombre: function() {
+                console.log(`Hola me llamo ${this.nombre} ${this.apellido} y me puedes seguir como ${this.contacto.instagram} en instagram.`)
+            }
+        }
+
+        console.log(alonso)
+        console.log(alonso['nombre'])
+        console.log(alonso['apellido'])
+        console.log(alonso.nombre)
+        console.log(alonso.edad)
+        console.log(alonso.soltero)
+        console.log(alonso.pasatiempos[1])
+        console.log(alonso.contacto)
+        console.log(alonso.contacto.telefono)
+        alonso.saludar()
+        alonso.decirMiNombre()
+
+        console.log(Object.keys(alonso))
+        console.log(Object.values(alonso))
+
+        console.log(alonso.hasOwnProperty('nombre'))
+    </script>
+</body>
+
+</html>

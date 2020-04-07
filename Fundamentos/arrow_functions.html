@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Functions</title>
+</head>
+<body>
+
+    <h1>Arrow Functions</h1>
+
+    <script>
+        // Arrow functions --> Es una nueva forma de declarar funciones anonimas expresadas
+
+        // Funcion expresada normal
+        const saludo = function() {
+            console.log("hola")
+        }
+
+        saludo()
+
+        // Arrow function
+        const saludar = ()=> console.log("Hola con arrow function de una sola línea")
+
+        saludar()
+
+        // Arrow function con parametros
+        const saludo1 = nombre => console.log(`Hola ${nombre}`)
+        saludo1("Alonso")
+
+        // Sin Arrow function
+        const sumar = function(a, b){
+            return a + b
+        }
+        console.log(sumar(8,9))
+
+        // Con arrow function
+        const sumar2 = (a, b) => a + b
+        console.log(sumar2(9,9))
+
+        // ************
+        const funcionDeVariasLineas = ()=>{
+            console.log("Uno")
+            console.log("Dos")
+            console.log("Tres")
+        }
+        funcionDeVariasLineas()
+
+        //**********************
+        const numeros = [1,2,3,4,5]
+        numeros.forEach((elemento, indice)=> console.log(`El elemento ${elemento} esta en la posición ${indice}`))
+
+        // Las arrow functions tienen la capacidad de heredar o reconocer el contexto en el que su objeto padre ha sido declarado
+
+        // Los metodos en un objet literal no son recomendables usar arrow function
+
+        // Con funcion declarada
+        /*function perro(){
+            console.log(this)
+        }
+        perro()*/
+
+        // Con Arrow 
+        const perro = {
+            nombre: "Oso",
+            ladrar() {
+                console.log(this)
+            }
+        }
+
+        perro.ladrar()
+    </script>
+    
+</body>
+</html>

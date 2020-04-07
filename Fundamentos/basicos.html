@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Fundamentos JavaScript</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+
+    <h1>Fundamentos JavaScript</h1>
+
+    <script>
+        //Var y Let
+        console.log("******Variables******")
+        var hola = 'Hola Mundo' //Ambito global
+        let hello = 'Hello World' // Ambito de bloque
+            // En resumen no usar var
+        console.log(hola)
+        console.log(hello)
+        console.log(window)
+
+
+        /* Constantes */
+        console.log("******Constantes******")
+        let a
+        const NUMERO = 3.1416
+            //const NUEVE
+        console.log(NUMERO)
+
+        const objeto = {
+            nombre: "Alonso",
+            edad: 25
+        }
+
+        const colores = ["blanco", "negro"]
+        console.log(objeto)
+        console.log(colores)
+
+        objeto.correo = "alonso.amoreno@live.com"
+        colores.push('anaranjado')
+        console.log(objeto)
+        console.log(colores)
+
+        // Cadenas de terxto -- Strings
+
+        //Declaraciones
+        console.log("******Strings******");
+        let nombre = "Alonso"
+        let apellido = 'Anchante'
+        let saludo = new String('Hola mundo')
+        let lorem = 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit reiciendis id illum. Dolorum magnam blanditiis facilis consectetur quae perspiciatis, ipsam quos vel in. Ipsa exercitationem debitis tempore aperiam facere delectus?'
+
+        console.log(nombre, apellido, saludo)
+        console.log(
+            nombre.length,
+            apellido.length,
+            saludo.length,
+            nombre.toLowerCase(),
+            apellido.toUpperCase(),
+            lorem.includes('amet'),
+            lorem.includes('alonso'),
+            lorem.split(','))
+
+        // Interpolación de Strings
+        console.log("******Interpolación de String******")
+        let nom = "Alonso"
+        let ape = "Anchante"
+
+        let sal = "Hola mi nombre es " + nom + " " + ape
+        console.log(sal)
+
+        // Interpolacion de variables
+        // Template String
+        let sal2 = `Hola mi nombre es ${nom} ${ape}.`
+        console.log(sal2)
+
+        let ul = `
+        <ul>
+            <li>Primavera</li>
+            <li>Verano</li>
+            <li>Otoño</li>
+            <li>Invierno</li>
+        </ul>`
+        console.log(ul)
+
+        // Numeros
+        console.log("******Números******");
+        let num1 = 2
+        let num2 = new Number(4)
+        let num3 = 7.15
+        let num4 = "5.6"
+        console.log(num1, num2)
+        console.log(num3.toFixed(1))
+        console.log(parseInt(num3))
+        console.log(typeof(num4))
+        console.log(parseInt(num4))
+
+        // Booleanos
+        console.log("******Booleanos******");
+        let verdadero = true
+        let falso = false
+        console.log(verdadero, falso)
+
+
+        // undefine, null y NaN
+
+        // Undefine
+        console.log("******Undefined******");
+        let indefinido
+        console.log(indefinido);
+
+        // Null
+        console.log("******Null******");
+        let nulo = null
+        console.log(nulo);
+
+        //NaN - Not a Number
+        console.log("******NaN******");
+        let noEsUnNumero = "Hola" * 3.7
+        console.log(noEsUnNumero);
+    </script>
+
+</body>
+
+</html>

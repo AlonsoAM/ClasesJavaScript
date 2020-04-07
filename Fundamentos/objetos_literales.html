@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos Literales</title>
+</head>
+<body>
+
+    <h1>Objetos literales</h1>
+    
+    <script>
+        let nombre = "Oso", edad = 7
+
+        const perro = {
+            nombre : nombre,
+            edad : edad,
+            ladrar: function() {
+                console.log("guauuuu guauuu")
+            }
+        }
+
+        console.log(perro)
+        perro.ladrar()
+
+        // Objeto literal
+        const dog = {
+            nombre,
+            edad,
+            raza: "callejero",
+            ladrar() {
+                console.log("guauuuuu guauuu guauuu")
+            }
+        }
+        console.log(dog)
+        dog.ladrar()
+
+    </script>
+</body>
+</html>

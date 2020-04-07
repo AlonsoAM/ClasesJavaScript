@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciclos</title>
+</head>
+<body>
+
+    <h1>Ciclos</h1>
+
+    <script>
+        let contador = 0
+        while (contador < 10) {
+            console.log("while " + contador)
+            contador++
+        }
+
+        do {
+            console.log("do While " + contador)
+            contador++
+        } while (contador < 10);
+
+        //For simple
+        for (let i = 0; i < 10; i++) {
+            console.log(i)
+            
+        }
+
+        let numero = [10,20,30,40,50,60,70,80,90]
+        for (let i = 0; i < numero.length; i++) {
+            const e = numero[i];
+            console.log(e)
+        }
+
+        // For in
+        const alonso = {
+            nombre : "Alonso",
+            apellido: "Anchante",
+            edad : 25
+        }
+
+        for (const propiedad in alonso) {
+            if (alonso.hasOwnProperty(propiedad)) {
+                const element = alonso[propiedad];
+                console.log(`Key: ${propiedad}, Value: ${element}`)
+            }
+        }
+
+        // For of
+        let cadena = "Hola Mundo"
+        for (const elemento of cadena) {
+            console.log(elemento)
+        }
+    </script>
+    
+</body>
+</html>

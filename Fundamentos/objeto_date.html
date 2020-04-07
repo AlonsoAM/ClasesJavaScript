@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructor Date</title>
+</head>
+<body>
+
+    <h1>Constructor Date</h1>
+
+    <script>
+        
+        console.log(Date())
+        console.clear()
+
+        let fecha = new Date()
+        console.log(fecha)
+
+        // Dia de la semana
+        console.log(fecha.getDay())
+
+        // Día del mes
+        console.log(fecha.getDate())
+
+        // Mes
+        console.log(fecha.getMonth())
+
+        // Año.. a partir de 1900
+        console.log(fecha.getYear())
+
+        // Año completo
+        console.log(fecha.getFullYear())
+
+        // Hora
+        console.log(fecha.getHours())
+        // Minutos
+        console.log(fecha.getMinutes())
+        // Segundos
+        console.log(fecha.getSeconds())
+        // Milisegundos
+        console.log(fecha.getMilliseconds())
+
+        // Forma humanamente entendible
+        console.log(fecha.toString())
+        console.log(fecha.toDateString())
+        console.log(fecha.toLocaleString())
+        console.log(fecha.toLocaleDateString())
+        console.log(fecha.toLocaleTimeString())
+
+        // Uso horario
+        console.log(fecha.getTimezoneOffset())
+        console.log(fecha.getUTCDate())
+        console.log(fecha.getUTCHours())
+
+        // Now
+        console.log(Date.now())
+
+        let cumpleAlonso = new Date(1994,6,31)
+        console.log(cumpleAlonso.toDateString())
+        
+    </script>
+    
+</body>
+</html>

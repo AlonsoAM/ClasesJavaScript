@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arreglos</title>
+</head>
+
+<body>
+    <h1>Arreglos</h1>
+    <script>
+        const a = []
+        const b = [1, true, "Alonso", ["a", "b", "c"]]
+        console.log(a)
+        console.log(b)
+        console.log(b.length)
+        console.log(b[2])
+        console.log(b[3])
+        console.log(b[3][2])
+
+        const c = Array.of("X", "Y", "Z", 9, 8, 7)
+        console.log(c)
+
+        const d = Array(100).fill(false)
+        console.log(d)
+
+        // Algunos metodos
+        const colores = ["Rojo", "Verde", "Azul"]
+        console.log(colores)
+        colores.push("Negro") // Agrega elemento
+        console.log(colores)
+        colores.pop() // Quita elemento
+        console.log(colores)
+
+        colores.forEach((e, index) => {
+            console.log(`<li id="${index}"> ${e} </li>`)
+        })
+
+        
+    </script>
+</body>
+
+</html>

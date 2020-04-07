@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores</title>
+</head>
+
+<body>
+    <h1>Operadores</h1>
+    <script>
+        /*Operadores*/
+
+        /* Aritméticos
+        +  -> Suma
+        -  -> Resta
+        *  -> Multiplicación
+        /  -> División
+        %  -> Módulo
+        () -> Agrupación
+        */
+        let a = 5 + 5 - 10 * 3
+        let modulo = 5 % 2
+
+        console.log(a)
+        console.log(modulo)
+
+        /* Relacionales
+        >  -> Mayor que
+        <  -> Menor que
+        >= -> Mayor o igual que
+        <= -> Menor o igual que
+        == -> Igual que
+        === -> Estrictament igual que
+        != -> Diferente que
+        !== -> Estrctamente diferente que
+        */
+        console.log(8 > 9)
+        console.log(9 > 8)
+        console.log(8 >= 9)
+        console.log(9 >= 8)
+        console.log(7 < 7)
+        console.log(7 <= 7)
+
+        /* Importante:
+                = -> Asignación de variable
+                == -> Comparación de valores
+                === -> Comparación de valores y tipo de dato
+                La buena practica dice que siempre usemos triple igual 
+        */
+
+        console.log(7 == 7)
+        console.log('7' == 7)
+        console.log('7' === 7)
+
+        /* Operadores de incremento y decremento */
+        let i = 1
+            //i = i + 2
+        i += 3
+        console.log(i)
+
+        /* Operador Unario */
+        let m = 1
+        m++
+        m--
+        ++m
+        --m
+        console.log(m)
+
+        /* Operadores Lógicos
+        Not -> !   --- Niega, lo que es verdadero lo vuelve falso.
+        Or  -> ||  --- Cuando tengo dos o mas condiciones, porlo menos una debe cumplirse, es decir, una de ellas sea verdadera el Or será verdadero.
+        And -> &&  --- Cuando tengo dos o más condiciones todas tienen que cumplirse, es decir ser verdaderas para que And se valide.
+        */
+        console.log(!true)
+        console.log(9 === 9 || '9' === 9)
+        console.log(9 === 9 && '9' === 9)
+        console.log(9 === 9 && '9' === '9')
+    </script>
+</body>
+
+</html>|

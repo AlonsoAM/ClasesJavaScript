@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones</title>
+</head>
+
+<body>
+
+    <h1>Funciones</h1>
+
+    <script>
+        // Función declarada
+        function estoEsUnaFuncion() {
+            // cuerpo de la función
+            console.log("uno")
+            console.log("dos")
+            console.log("tres")
+        }
+
+        // Invocación de función
+        estoEsUnaFuncion()
+
+        //**********************************
+        function unaFuncionQueDevuelveValor() {
+            console.log("uno")
+            return "LA función ha retornado una cadena de texto"
+        }
+        let valorDeFuncion = unaFuncionQueDevuelveValor()
+        console.log(valorDeFuncion)
+
+        // *********************************
+        function saludar(nombre = "desconocido", edad = 0) {
+            console.log(`Hola mi nombre es ${nombre} y tengo ${edad} años.`)
+        }
+        saludar("Alonso", 25)
+        saludar()
+
+        //*************************************
+        // Función declarada VS funciones expresadas
+
+        funcionDeclarada()
+
+        function funcionDeclarada() {
+            console.log('Esto es una función declarada, puede invocarse en cualquier parte de nuestro código, incluso antes de que la función sea declarada')
+        }
+
+        funcionDeclarada()
+
+        // Función anónima (funcion sin nombre)
+
+        //funcionExpresada()
+
+        const funcionExpresada = function() {
+            console.log("Esto es una función expresada, es decir, una función que se le ha asignado como valor a una vairable, si invocamos esta función antes de su definición, JS nos dirá... 'Cannot access 'funcionExpresada' before initilizacion''")
+        }
+
+        funcionExpresada()
+    </script>
+
+</body>
+
+</html>
