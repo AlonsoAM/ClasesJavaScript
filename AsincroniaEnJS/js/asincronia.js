@@ -16,23 +16,25 @@ En JavaScript vamos a tener dos tispo de codigo:
 
 /*Código Síncrono Bloqueante*/
 
-// ((()=>{
-//     console.log('Código Síncrono')
-//     console.log('Inicio')
-//
-//     function dos() {
-//       console.log('Dos')
-//     }
-//
-//     function uno() {
-//       console.log('Uno')
-//       dos()
-//       console.log('Tres')
-//     }
-//
-//     uno()
-//     console.log('Fin')
-// })())
+((() => {
+  console.log('Código Síncrono')
+  console.log('Inicio')
+
+  function dos() {
+    console.log('Dos')
+  }
+
+  function uno() {
+    console.log('Uno')
+    dos()
+    console.log('Tres')
+  }
+
+  uno()
+  console.log('Fin')
+})())
+
+console.log("****************************");
 
 /*Código Asíncrono No Bloqueante*/
 
@@ -42,7 +44,20 @@ En JavaScript vamos a tener dos tispo de codigo:
   console.log("Inicio")
 
   function dos() {
-    setTimeout()
+    setTimeout(() => {
+      console.log("Dos")
+    }, 1000)
   }
+
+  function uno() {
+    setTimeout(() => {
+      console.log("Uno")
+    }, 0)
+    dos()
+    console.log("Tres")
+  }
+
+  uno()
+  console.log("Fin")
 
 })())
