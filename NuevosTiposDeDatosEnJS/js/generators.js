@@ -1,7 +1,7 @@
 // Generador
 
 function* iterable() {
-    
+
     yield "Hola" // Es como el return por cada iterador
 
     console.log("Hola consola")
@@ -39,7 +39,7 @@ function cuadrado(valor) {
             resultado: valor * valor
         })
     }, Math.random() * 1000);
-    
+
 }
 
 function* generador() {
