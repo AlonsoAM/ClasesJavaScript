@@ -1,1 +1,5 @@
-alert("Hola")
+function Hola() {
+  alert("Hola")
+}
+
+Hola()
