@@ -12,12 +12,17 @@
         }
         
         .cards {
+            border: thin solid var(--dark-color);
+            padding: 1rem;
+        }
+        
+        .card {
             display: inline-block;
             background-color: var(--dark-color);
             color: var(--yellow-color);
         }
         
-        .cards figcaption {
+        .card figcaption {
             padding: 1rem;
         }
         
@@ -35,6 +40,24 @@
         
         .sepia {
             filter: sepia(1);
+        }
+        
+        .eventos-flujo div {
+            padding: 4rem;
+            font-size: 2rem;
+            text-align: center;
+        }
+        
+        .uno {
+            background-color: yellow;
+        }
+        
+        .dos {
+            background-color: gold;
+        }
+        
+        .tres {
+            background-color: lightyellow;
         }
     </style>
 
@@ -91,42 +114,70 @@
     <a href="index.html" class="link-dom" data-description="Document Object Model" data-id="1" style="background-color: #f7df1e; color: #222;">DOM</a>
 
     <section class="cards">
-        <figure>
+        <figure class="card">
             <img src="https://placeimg.com/200/200/tech" alt="tech">
             <figcaption>Tech</figcaption>
         </figure>
-    </section>
 
-    <section class="cards">
-        <figure>
+        <figure class="card">
             <img src="https://placeimg.com/200/200/animals" alt="animals">
             <figcaption>Animal</figcaption>
         </figure>
-    </section>
 
-    <section class="cards">
-        <figure>
+        <figure class="card">
             <img src="https://placeimg.com/200/200/people" alt="people">
             <figcaption>People</figcaption>
         </figure>
-    </section>
 
-    <section class="cards">
-        <figure>
+        <figure class="card">
             <img src="https://placeimg.com/200/200/arch" alt="Arch">
             <figcaption>Arch</figcaption>
         </figure>
-    </section>
 
-    <section class="cards">
-        <figure>
+        <figure class="card">
             <img src="https://placeimg.com/200/200/nature" alt="nature">
             <figcaption>Nature</figcaption>
         </figure>
     </section>
 
+    <template id="template-card">
+        <figure class="card">
+            <img>
+            <figcaption></figcaption>
+        </figure>
+    </template>
+    <h3>Eventos en JavaScript</h3>
+    <h4>Manejadores de Eventos</h4>
+    <button onclick="holaMundo()">Evento con atributo HTML</button>
+    <br><br>
+    <button id="evento-semantico">Evento con Manejador Semántico</button>
+    <br><br>
+    <button id="evento-multiple">Evento con manejador multiple</button>
+    <br><br>
+    <button id="evento-remover">Removiendo eventos con manejadores multiples</button>
+    <br><br>
+    <h4>Flujo de eventos</h4>
+    <section class="eventos-flujo">
+        <div class="uno">
+            1
+            <div class="dos">
+                2
+                <div class="tres">
+                    3
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <script src="js/05_clases_css.js"></script>
+
+    <!-- <script src="js/05_clases_css.js"></script> -->
+    <!-- <script src="js/06_texto_html.js"></script> -->
+    <!-- <script src="js/08_creando_elementos.js"></script> -->
+    <!-- <script src="js/09_teamplates_html.js"></script> -->
+    <!-- <script src="js/11_cool_style.js"></script> -->
+    <script src="js/12_manejadors_de_eventos.js"></script>
+    <script src="js/13_eventos_con_parametros.js"></script>
+    <script src="js/14_flujo_de_eventos.js"></script>
 
     <!--<script>
         console.log(window)
