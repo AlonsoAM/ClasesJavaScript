@@ -35,6 +35,7 @@ img {
     height: auto;
 }
 
+
 /* ****** Estilos del Menú Hamburguesa ******** */
 
 .header {
@@ -91,6 +92,7 @@ img {
     position: fixed;
     z-index: 999;
     bottom: 1vh;
+    top: 78vh;
     right: 1vw;
     width: 4rem;
     height: 4rem;
@@ -125,4 +127,15 @@ img {
     font-weight: bold;
     color: var(--second-color);
     background-color: var(--main-modal-color);
+}
+
+#pie {
+    padding: 1rem;
+    bottom: 0;
+    position: sticky;
+    background-color: rgba(34, 34, 34, 0.85);
+    font-size: small;
+    color: white;
+    font-weight: bold;
+    text-align: center;
 }
