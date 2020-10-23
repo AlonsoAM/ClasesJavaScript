@@ -35,6 +35,11 @@ img {
     height: auto;
 }
 
+video {
+    max-width: 100%;
+    height: auto;
+}
+
 
 /* ****** Estilos del Menú Hamburguesa ******** */
 
@@ -44,16 +49,18 @@ img {
     padding: 1rem;
     background-color: var(--main-color);
     color: var(--second-color);
+    z-index: 997;
 }
 
 .header h1 {
     margin: 0;
     text-align: center;
+    font-weight: bold;
 }
 
 .section {
     padding: 2rem;
-    padding-top: 4rem;
+    padding-top: 5rem;
     margin-left: auto;
     margin-right: auto;
     width: 100%;
@@ -67,12 +74,16 @@ img {
     z-index: 998;
     top: 0;
     bottom: 0;
-    left: 0;
+    left: -100%;
     right: 0;
     width: 100%;
+    /*Para que tenga su propio scroll*/
+    overflow-y: auto;
+    /* ********** */
     background-color: var(--second-modal-color);
     opacity: 0;
-    transition: transform 0.3s ease, opacity 0.5s ease;
+    visibility: hidden;
+    transition: transform 0.3s ease-in-out, opacity 0.5s ease-in-out;
     /*De arriba*/
     /* transform: translate(0, -100%);
     /*De abajo*/
@@ -84,23 +95,24 @@ img {
 }
 
 .panel.is-active {
-    /* transform: translate(0, 0); */
+    transform: translate(100%, 0);
     opacity: 1;
+    visibility: visible;
 }
 
 .boton-panel {
     position: fixed;
     z-index: 999;
     bottom: 1vh;
-    top: 78vh;
+    top: 86vh;
     right: 1vw;
     width: 4rem;
     height: 4rem;
-    border-radius: 50% !important;
+    border-radius: 50%;
     padding: 0 !important;
     display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
+    justify-content: center;
+    align-items: center;
     background-color: var(--main-color) !important;
 }
 
@@ -114,10 +126,10 @@ img {
 }
 
 .menu a {
-    padding: 2rem;
+    padding: .85rem;
     width: inherit;
     display: block;
-    font-size: 1.5rem;
+    font-size: 2rem;
     text-decoration: none;
     color: var(--main-color);
     transition: all 0.3s ease;
@@ -129,6 +141,231 @@ img {
     background-color: var(--main-modal-color);
 }
 
+
+/* ****** eventos del teeclado******** */
+
+.stage {
+    display: flex;
+    min-height: 50vh;
+    background-color: var(--second-color);
+}
+
+.ball {
+    margin: auto;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: var(--main-color);
+}
+
+
+/* ****** Scroll Top Boton ******** */
+
+.scroll-top-btn {
+    position: fixed;
+    z-index: 999;
+    bottom: 1vh;
+    /* calc(4.25rem + 1vw) */
+    right: 1vw;
+    width: 4rem;
+    height: 4rem;
+    top: 75vh;
+    border-radius: 50%;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-color);
+    font-size: 2rem;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: var(--second-color);
+    border: 0;
+    cursor: pointer;
+    outline: 0;
+    transition: all 0.4s ease-out;
+}
+
+.scroll-top-btn:hover {
+    background-color: var(--second-color);
+    color: var(--main-color);
+}
+
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+/* ****** Dark - Ligth mode ******** */
+
+.dark-theme-btn {
+    position: fixed;
+    z-index: 999;
+    bottom: 1vh;
+    left: 1vw;
+    width: 4rem;
+    height: 4rem;
+    top: 86vh;
+    border-radius: 50%;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-color);
+    font-size: 2rem;
+    color: var(--second-color);
+    border: 0;
+    cursor: pointer;
+    outline: 0;
+    transition: all 0.4s ease-out;
+}
+
+.dark-theme-btn:hover {
+    background-color: var(--second-color);
+    color: var(--main-color);
+}
+
+
+/* ****** Dark mode ******** */
+
+.dark-mode {
+    background-color: var(--second-color);
+    color: var(--main-color);
+}
+
+
+/* ****** Network Status ******** */
+
+.online,
+.offline {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    background-color: #1b5e20;
+    color: #fff;
+    transition: all 0.4s ease;
+}
+
+.offline {
+    background-color: #b71c1c;
+}
+
+
+/* ****** Search Filter ******** */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.card {
+    background-color: var(--second-color);
+    color: var(--main-color);
+    margin-right: 1rem;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    transition: all 0.3s ease-out;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card figcaption {
+    padding: 1rem;
+}
+
+.filter {
+    /* display: none; */
+    opacity: 0;
+    visibility: hidden;
+    order: 1;
+}
+
+
+/* ****** Sorteo Digital ******** */
+
+.players li {
+    list-style: none;
+    text-align: center;
+}
+
+
+/* ****** Responsive Slider ******** */
+
+.slider {
+    position: relative;
+    width: 80%;
+    margin: 1rem auto;
+    text-align: center;
+    border-radius: 20px;
+    border: 10px solid var(--main-color);
+}
+
+.slider-slides {
+    position: relative;
+    height: 400px;
+}
+
+.slider-slide {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease;
+}
+
+.slider-slide img {
+    height: inherit;
+    width: inherit;
+    object-fit: cover;
+    object-position: 50%;
+    border-radius: 5px;
+}
+
+.slider-slide.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.slider a {
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    text-decoration: none;
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+.slider a:hover {
+    transform: scale(1.2);
+}
+
+.slider-buttons {
+    position: absolute;
+    width: 100%;
+    top: 45%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 2.5rem;
+    font-weight: bold;
+    align-items: center;
+}
+
+
+/* ****** pie de página ******** */
+
 #pie {
     padding: 1rem;
     bottom: 0;
@@ -138,4 +375,146 @@ img {
     color: white;
     font-weight: bold;
     text-align: center;
+}
+
+
+/* ********** Scroll Spy ********* */
+
+@media screen and (min-width:1024px) {
+    body {
+        display: grid;
+        grid-template-columns: 80% 20%;
+        grid-template-rows: 4rem auto;
+        grid-template-areas: "header header" "main panel" "footer footer";
+    }
+    main {
+        grid-area: main;
+    }
+    .header {
+        grid-area: header;
+    }
+    .panel {
+        grid-area: panel;
+        position: sticky;
+        top: 4rem;
+        transform: translate(0, 0);
+        opacity: 1;
+        visibility: visible;
+        background-color: var(--second-color);
+        justify-content: flex-start;
+        align-self: start;
+    }
+    #pie {
+        grid-area: footer;
+        background-color: var(--second-color);
+    }
+    .boton {
+        display: none;
+    }
+    .menu {
+        justify-content: start;
+        text-align: right;
+    }
+    .menu a {
+        font-size: 1rem;
+        padding: 0.75rem;
+    }
+    .menu a:hover,
+    .menu a.active {
+        color: var(--second-color);
+        background-color: var(--main-color);
+    }
+    .scroll-top-btn {
+        bottom: 1vh;
+        left: 1vw;
+    }
+}
+
+
+/* ********** ContactForm Validations ********* */
+
+.contact-form {
+    --form-ok-color: #4caf50;
+    --form-error-color: #f44336;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+.contact-form>* {
+    padding: 0.5rem;
+    margin: 1rem auto;
+    display: block;
+    width: 100%;
+}
+
+.contact-form textarea {
+    resize: none;
+}
+
+.contact-form legend,
+.contact-form-response {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.contact-form input,
+.contact-form textarea {
+    font-size: 1rem;
+    font-family: sans-serif;
+}
+
+.contact-form input[type="submit"] {
+    width: 50%;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    transition: all 0.5s ease;
+}
+
+.contact-form input[type="submit"]:hover {
+    transform: scale(1.1);
+}
+
+.contact-form *::placeholder {
+    color: #000;
+}
+
+.contact-form [required]:valid {
+    border: thin solid var(--form-ok-color);
+}
+
+.contact-form [required]:invalid {
+    border: thin solid var(--form-error-color);
+}
+
+.contact-form-error {
+    margin-top: -1rem;
+    font-size: 80%;
+    background-color: var(--form-error-color);
+    color: #fff;
+    transition: all 800ms ease;
+}
+
+.contact-form-error.is-active {
+    display: block;
+    animation: show-message 1s 1 normal 0s ease-out both;
+}
+
+.none {
+    display: none;
+}
+
+@keyframes show-message {
+    0% {
+        visibility: hidden;
+        opacity: 0;
+    }
+    100% {
+        visibility: visible;
+        opacity: 1;
+    }
 }
