@@ -6,7 +6,7 @@ const darkTheme = (btn, classDark) => {
     const $themeBtn = d.querySelector(btn),
         $selectors = d.querySelectorAll("[data-dark]");
 
-    let moon = "🌙",
+    let moon = "🌜",
         sun = "☀️";
 
     const ligthMode = () => {
