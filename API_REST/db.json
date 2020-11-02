@@ -44,6 +44,16 @@
       "nombre": "Shaka",
       "constelacion": "Virgo",
       "id": 9
+    },
+    {
+      "nombre": "Dhoko",
+      "constelacion": "Libra",
+      "id": 10
+    },
+    {
+      "nombre": "Milo",
+      "constelacion": "Escorpión",
+      "id": 11
     }
   ],
   "dioses": [
