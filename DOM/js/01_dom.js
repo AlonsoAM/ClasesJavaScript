@@ -1,4 +1,4 @@
-console.log("*************** Elementos del Documento ********************")
+console.log('*************** Elementos del Documento ********************')
 
 console.log(document)
 console.log(document.head)
@@ -13,8 +13,8 @@ console.log(document.forms)
 console.log(document.styleSheets)
 console.log(document.scripts)
 
-setTimeout(function() {
-    console.log(document.getSelection().toString())
+setTimeout(function () {
+  console.log(document.getSelection().toString())
 }, 3000)
 
-document.write("<h2>Hola mundo desde el DOM</h2>")
+document.write('<h2>Hola mundo desde el DOM</h2>')
